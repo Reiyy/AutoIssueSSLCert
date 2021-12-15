@@ -36,7 +36,7 @@ jobs:
     - name: Commit
       run: |
         # Replace 'you@example.com' and 'yourname' with your own email and user name
-        git config --global user.email zhzhu722@yareiy.com
+        git config --global user.email zzh040722@gmail.com
         git config --global user.name Reiyy
         git add ./Certs.zip
         git commit -m "Update Certs" -a
