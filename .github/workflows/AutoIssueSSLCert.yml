@@ -33,7 +33,7 @@ jobs:
         $ACME --installcert -d *.yareiy.com --key-file ./Certs/*.yareiy.com.key --fullchain-file ./Certs/*.yareiy.com.cer
         $ACME --issue --server zerossl --dns dns_dp -d *.reiyy.com -d reiyy.com
         $ACME --installcert -d *.reiyy.com --key-file ./Certs/*.reiyy.com.key --fullchain-file ./Certs/*.reiyy.com.cer
-        $ACME --issue --server zerossl --dns dns_cf -d *.yareiy.eu.org -d yareiy.eu.org
+        $ACME --issue --server zerossl --dns dns_cf -d *.reiyy.eu.org -d reiyy.eu.org
         $ACME --installcert -d *.reiyy.eu.org --key-file ./Certs/*.reiyy.eu.org.key --fullchain-file ./Certs/*.reiyy.eu.org.cer
         zip -rP "$ZIPPWD" Certs.zip Certs
     - name: Commit
