@@ -35,7 +35,7 @@ jobs:
         $ACME --installcert -d *.reiyy.com --key-file ./Certs/*.reiyy.com.key --fullchain-file ./Certs/*.reiyy.com.cer
         $ACME --issue --server zerossl --dns dns_cf -d *.reiyy.eu.org -d reiyy.eu.org
         $ACME --installcert -d *.reiyy.eu.org --key-file ./Certs/*.reiyy.eu.org.key --fullchain-file ./Certs/*.reiyy.eu.org.cer
-        zip -rP "$ZIPPWD" Certs.zip Certs
+        zip -rP -m "$ZIPPWD" Certs.zip Certs
     - name: Commit
       run: |
         # Replace 'you@example.com' and 'yourname' with your own email and user name
