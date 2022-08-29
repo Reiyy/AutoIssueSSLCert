@@ -35,6 +35,8 @@ jobs:
         $ACME --installcert -d *.reiyy.com --key-file ./Certs/*.reiyy.com.key --fullchain-file ./Certs/*.reiyy.com.cer
         $ACME --issue --server zerossl --dns dns_cf -d *.reiyy.eu.org -d reiyy.eu.org
         $ACME --installcert -d *.reiyy.eu.org --key-file ./Certs/*.reiyy.eu.org.key --fullchain-file ./Certs/*.reiyy.eu.org.cer
+        $ACME --issue --server zerossl --dns dns_cf -d *.唯.page -d 唯.page
+        $ACME --installcert -d *.唯.page --key-file ./Certs/*.唯.page.key --fullchain-file ./Certs/*.唯.page.cer
         zip -rP "$ZIPPWD" Certs.zip Certs
     - name: Commit
       run: |
