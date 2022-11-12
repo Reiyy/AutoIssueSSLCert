@@ -25,7 +25,6 @@ jobs:
         wget -O -  https://get.acme.sh | sh -s email="$ACMEMAIL"
         $ACME --upgrade
         echo "$DNSAPI" >> /home/runner/.acme.sh/account.conf
-        apt-get install -y idn
     - name: Issue & Deploy Certificates
       run: |
         mkdir -p ./Certs
