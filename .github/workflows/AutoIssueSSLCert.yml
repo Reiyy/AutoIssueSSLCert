@@ -30,8 +30,6 @@ jobs:
       run: |
         mkdir -p ./Certs
         $ACME --register-account  -m "$ACMEMAIL" --server zerossl
-        $ACME --issue --server zerossl --dns dns_cf -d *.唯.page -d 唯.page
-        $ACME --installcert -d *.唯.page --key-file ./Certs/*.唯.page.key --fullchain-file ./Certs/*.唯.page.cer
         $ACME --issue --server zerossl --dns dns_dp -d *.yareiy.com -d yareiy.com
         $ACME --installcert -d *.yareiy.com --key-file ./Certs/*.yareiy.com.key --fullchain-file ./Certs/*.yareiy.com.cer
         $ACME --issue --server zerossl --dns dns_dp -d *.reiyy.com -d reiyy.com
