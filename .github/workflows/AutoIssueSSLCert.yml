@@ -28,7 +28,7 @@ jobs:
     - name: Issue & Deploy Certificates
       run: |
         mkdir -p ./Certs
-        $ACME --register-account  -m "$ACMEMAIL" --server zerossl
+        $ACME --register-account -m "$ACMEMAIL" --server zerossl
         $ACME --issue --server zerossl --dns dns_dp -d *.yareiy.com -d yareiy.com
         $ACME --installcert -d *.yareiy.com --key-file ./Certs/*.yareiy.com.key --fullchain-file ./Certs/*.yareiy.com.cer
         $ACME --issue --server zerossl --dns dns_dp -d *.reiyy.com -d reiyy.com
