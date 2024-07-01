@@ -29,12 +29,10 @@ jobs:
       run: |
         mkdir -p ./Certs
         $ACME --register-account -m "$ACMEMAIL" --server zerossl
-        $ACME --issue --server zerossl --dns dns_dp -d *.yareiy.com -d yareiy.com
-        $ACME --installcert -d *.yareiy.com --key-file ./Certs/*.yareiy.com.key --fullchain-file ./Certs/*.yareiy.com.cer
         $ACME --issue --server zerossl --dns dns_dp -d *.reiyy.com -d reiyy.com
         $ACME --installcert -d *.reiyy.com --key-file ./Certs/*.reiyy.com.key --fullchain-file ./Certs/*.reiyy.com.cer
-        $ACME --issue --server zerossl --dns dns_dp -d *.p.reiyy.com -d p.reiyy.com
-        $ACME --installcert -d *.p.reiyy.com --key-file ./Certs/*.p.reiyy.com.key --fullchain-file ./Certs/*.p.reiyy.com.cer
+        $ACME --issue --server google --dns dns_dp -d *.home.reiyy.com -d home.reiyy.com
+        $ACME --installcert -d *.home.reiyy.com --key-file ./Certs/*.home.reiyy.com.key --fullchain-file ./Certs/*.home.reiyy.com.cer
         zip -rP "$ZIPPWD" Certs.zip Certs
     - name: Commit
       run: |
