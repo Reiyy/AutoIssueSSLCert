@@ -31,6 +31,7 @@ jobs:
         $ACME --register-account -m "$ACMEMAIL" --server zerossl
         $ACME --issue --server zerossl --dns dns_dp -d *.reiyy.com -d reiyy.com
         $ACME --installcert -d *.reiyy.com --key-file ./Certs/*.reiyy.com.key --fullchain-file ./Certs/*.reiyy.com.cer
+        $ACME --register-account -m "$ACMEMAIL" --server google
         $ACME --issue --server google --dns dns_dp -d *.home.reiyy.com -d home.reiyy.com
         $ACME --installcert -d *.home.reiyy.com --key-file ./Certs/*.home.reiyy.com.key --fullchain-file ./Certs/*.home.reiyy.com.cer
         zip -rP "$ZIPPWD" Certs.zip Certs
